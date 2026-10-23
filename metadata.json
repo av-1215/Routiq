@@ -1,0 +1,6 @@
+{
+  "name": "Routiq",
+  "description": "Routiq — Smarter Routes. Greener Journeys. Unified Indian smart mobility platform with EV bay discovery, dynamic CNG congestion management, and TRIPP intelligent routing engine.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

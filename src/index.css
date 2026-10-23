@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --routiq-deep-forest: #062B25;
+    --routiq-forest-dark: #031815;
+    --routiq-green: #28B85B;
+    --routiq-electric-blue: #168BDB;
+    --routiq-warm-cream: #F6F1E8;
+    --routiq-signal-amber: #F3C45B;
+  }
+}
+
+.bg-routiq-deep-forest {
+  background-color: #062B25;
+}
+.bg-routiq-forest-dark {
+  background-color: #031815;
+}
+.bg-routiq-green {
+  background-color: #28B85B;
+}
+.text-routiq-green {
+  color: #28B85B;
+}
+.border-routiq-green {
+  border-color: #28B85B;
+}
+.bg-routiq-blue {
+  background-color: #168BDB;
+}
+.text-routiq-blue {
+  color: #168BDB;
+}
+.border-routiq-blue {
+  border-color: #168BDB;
+}
+.text-routiq-cream {
+  color: #F6F1E8;
+}
+.bg-routiq-cream {
+  background-color: #F6F1E8;
+}
+.text-routiq-amber {
+  color: #F3C45B;
+}
+.border-routiq-amber {
+  border-color: #F3C45B;
+}
+
+.font-mono,
+.tabular-nums {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom delicate scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #031815;
+}
+::-webkit-scrollbar-thumb {
+  background: #0d4239;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #176053;
+}

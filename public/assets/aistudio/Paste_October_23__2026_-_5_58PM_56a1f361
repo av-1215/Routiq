@@ -1,0 +1,1668 @@
+Build **Routiq — Smarter Routes. Greener Journeys.**
+
+Create a polished, realistic, interactive India-first smart-mobility application combining:
+
+- EV charging discovery and reservation
+- CNG station discovery and queue intelligence
+- CNG virtual queue / time-slot reservation where supported
+- TRIPP intelligent trip planning and dynamic rerouting
+- community-driven station and mobility feedback
+- real-world sensor/mechatronics integration
+- transparent station reliability and data freshness
+- geographical maps
+- safety-aware mobility workflows
+
+The application must feel like a **real product that could be deployed**, not a school-project mockup or a collection of static UI screens.
+
+The USP is:
+
+> **Usability + Accuracy + Efficiency**
+
+The core philosophy is:
+
+> **Complex technology underneath. Simple decisions on top.**
+
+The application should be extremely simple at first glance, while becoming sophisticated progressively as the user explores.
+
+---
+
+# 1. BRAND IDENTITY — LOGO IS THE SOURCE OF TRUTH
+
+The supplied Routiq logo is the primary visual identity.
+
+Do NOT invent a separate colour palette.
+
+Extract the actual colours from the supplied logo and build the complete design system around them.
+
+Use the logo-derived colours for:
+
+- primary actions
+- navigation
+- backgrounds
+- cards
+- EV identity
+- CNG identity
+- TRIPP
+- maps
+- status indicators
+- charts
+- buttons
+- illustrations
+- dark mode
+- light mode
+
+Do not force previously suggested hex values if they do not exactly match the logo.
+
+The logo should remain visually consistent.
+
+Do not:
+- distort it
+- recolour it arbitrarily
+- add unnecessary effects
+- stretch it
+
+Use the logo subtly throughout the application.
+
+The interface should feel like the entire product was designed from the logo.
+
+---
+
+# 2. DESIGN PHILOSOPHY
+
+The UI must be:
+
+- clean
+- minimal
+- premium
+- intuitive
+- highly usable
+- data-driven where appropriate
+- visually calm
+- responsive
+- Indian-context aware
+
+Do NOT try to show every feature immediately.
+
+The application should follow:
+
+**Simple → Explore → Advanced**
+
+A new user should understand the Home screen almost immediately.
+
+An advanced user should be able to explore detailed data, maps, sensor readings, route constraints and station information.
+
+Never sacrifice usability for feature count.
+
+---
+
+# 3. FIRST-LAUNCH EXPERIENCE
+
+When the application is launched for the first time and the user does NOT have a profile, do NOT immediately show the normal Home dashboard.
+
+Start with a short onboarding flow.
+
+### Screen 1
+
+Show the Routiq logo.
+
+**Smarter Routes. Greener Journeys.**
+
+Button:
+
+**Get started**
+
+---
+
+### Screen 2
+
+Ask:
+
+**What do you drive?**
+
+Options:
+
+**EV**
+
+**CNG**
+
+Also allow:
+
+**I use both**
+
+The choice determines the initial interface.
+
+---
+
+### Screen 3 — EV
+
+Ask only the essential information:
+
+**Your vehicle**
+
+- vehicle manufacturer
+- model
+- connector type
+- battery capacity
+- current battery %
+
+Where possible, provide selectable vehicle models rather than forcing manual entry.
+
+Allow:
+
+**Skip for now**
+
+if the user does not know the information.
+
+---
+
+### Screen 3 — CNG
+
+Ask:
+
+**Your vehicle**
+
+- vehicle type
+- manufacturer/model if available
+- approximate fuel efficiency if known
+
+Allow:
+
+**Skip for now**
+
+---
+
+### Screen 4
+
+Ask for optional:
+
+**Location access**
+
+Explain briefly why:
+
+> Helps Routiq find nearby stations and calculate routes.
+
+Never force location permission.
+
+Provide manual location entry if permission is denied.
+
+---
+
+### Screen 5
+
+Create the profile.
+
+Then immediately enter the appropriate interface.
+
+---
+
+# 4. PERSONALIZED HOME
+
+The Home interface should adapt based on the user's vehicle.
+
+If EV:
+
+Focus on:
+
+**Where are you going?**
+
+and:
+
+**Charge EV**
+
+If CNG:
+
+Focus on:
+
+**Where are you going?**
+
+and:
+
+**Find CNG**
+
+If both:
+
+Provide a very simple mobility choice.
+
+Do NOT show two large dashboards.
+
+---
+
+# 5. EXTREMELY SIMPLE HOME
+
+Home should be the simplest screen in the entire application.
+
+Do NOT put:
+
+- large statistics
+- complicated graphs
+- excessive station lists
+- technical data
+- huge maps
+- long descriptions
+- large About sections
+- multiple promotional banners
+
+Home should primarily contain:
+
+### Routiq logo
+
+### Main question
+
+**Where are you going?**
+
+Destination search.
+
+### Primary action
+
+Based on the user's vehicle:
+
+**Find a charger**
+
+or
+
+**Find CNG**
+
+### Secondary action
+
+**Plan with TRIPP**
+
+### Small summary
+
+Show only useful information.
+
+Example:
+
+> **Next booking**
+> Charger B · 18 min away
+
+or:
+
+> **Nearby**
+> CNG · 7 min wait
+
+or:
+
+> **Your trip**
+> 24 km · 38 min
+
+The Home screen should feel almost empty compared with the rest of the application.
+
+That is intentional.
+
+---
+
+# 6. HOME SHOULD PROVIDE SUMMARIES, NOT DATA
+
+Home should summarize the intelligence generated elsewhere.
+
+Example:
+
+> **Routiq recommends**
+> Charger B  
+> Available · 8 min away
+
+or:
+
+> **Queue update**
+> Your CNG station is now 6 min away from your turn.
+
+or:
+
+> **Trip update**
+> Traffic increased. TRIPP found a 9-minute faster route.
+
+The user can tap the summary to explore more.
+
+---
+
+# 7. PRIMARY NAVIGATION
+
+Use:
+
+- Home
+- Explore
+- TRIPP
+- Community
+- Bookings
+- Profile
+
+Keep navigation minimal.
+
+Do not create separate permanent EV and CNG tabs.
+
+The selected vehicle determines the primary experience.
+
+Allow switching vehicle type from Profile or vehicle selector.
+
+---
+
+# 8. EV INTERFACE
+
+The EV experience must prioritize:
+
+1. Battery
+2. Compatible charger
+3. Availability
+4. Charging speed
+5. Waiting
+6. Charging time
+7. Cost
+8. Reservation
+
+Show detailed information only after the user explores.
+
+---
+
+# 9. CNG INTERFACE
+
+The CNG experience must prioritize:
+
+1. Queue
+2. Estimated waiting time
+3. Station availability
+4. Traffic
+5. Distance
+6. Refuelling time
+7. Price
+8. Virtual queue / reservation
+
+Do not make CNG look like a copy of the EV interface.
+
+---
+
+# 10. GEOGRAPHICAL MAPS ARE CORE TO THE PRODUCT
+
+Use proper geographical map interfaces throughout the application.
+
+Maps must be functional and convincing.
+
+Use real geographical positioning when a map provider/API is available.
+
+The map must support:
+
+- user location
+- station locations
+- destination
+- routes
+- alternative routes
+- traffic where available
+- station markers
+- selected station
+- charging/refuelling stops
+- route distance
+- estimated travel time
+
+Do NOT use decorative fake maps.
+
+If a real map API is unavailable, use a clearly labelled demo map/data layer and structure the code so it can later be connected to a real map provider.
+
+---
+
+# 11. MAP ↔ LIST INTERACTION
+
+The map and station list must be connected.
+
+When the user selects a station:
+
+→ map marker becomes selected.
+
+When the user taps a map marker:
+
+→ station card opens.
+
+When the user changes a filter:
+
+→ map and list update together.
+
+When the user selects a route:
+
+→ route becomes highlighted.
+
+---
+
+# 12. EV STATION MAP
+
+Every EV station must have:
+
+- exact geographical position
+- charger markers
+- user location
+- route
+- distance
+- estimated drive time
+- traffic where available
+- nearby alternatives
+
+Station page:
+
+**Directions**
+
+**Reserve**
+
+**Share**
+
+**Report issue**
+
+---
+
+# 13. CNG STATION MAP
+
+Every CNG station must show:
+
+- geographical position
+- user location
+- route
+- traffic
+- queue indicator
+- estimated waiting time
+- nearby alternatives
+
+Station markers should visually communicate:
+
+**Low queue**
+
+**Moderate queue**
+
+**High queue**
+
+Do not rely on colour alone.
+
+---
+
+# 14. EV DATA
+
+Each EV charger/station can display:
+
+- station name
+- operator
+- connector
+- charging type
+- charging speed
+- availability
+- occupied/free/reserved/offline
+- estimated charging time
+- estimated cost
+- distance
+- driving time
+- amenities
+- operating hours
+- reliability
+- last updated
+
+Advanced information can include:
+
+- voltage
+- current
+- power
+- energy delivered
+- connector status
+
+Only display technical telemetry when available.
+
+---
+
+# 15. CNG DATA
+
+Each CNG station can display:
+
+- station name
+- operator
+- distance
+- driving time
+- queue
+- estimated waiting time
+- confidence
+- CNG availability
+- price
+- station status
+- operating hours
+- last updated
+- amenities
+
+Advanced information can include sensor-derived station data where available.
+
+---
+
+# 16. MECHATRONICS INTEGRATION
+
+A major Routiq innovation should be the combination of:
+
+**Hardware + Sensors + Software + Mobile Interface**
+
+Design the application architecture so physical sensors at EV chargers or CNG stations can provide information to Routiq.
+
+Do NOT claim physical hardware exists unless it is actually built.
+
+For the science project, create a realistic **Routiq Smart Station prototype**.
+
+---
+
+# 17. EV SENSOR SYSTEM
+
+Where physically implemented or simulated, sensors could monitor:
+
+- connector occupied/free
+- bay occupied/free
+- charging session active
+- charging power
+- voltage/current where safely measurable through appropriate equipment
+- energy delivered
+- charging fault
+- temperature telemetry where available from safe system interfaces
+- emergency-stop state
+- charger online/offline
+
+The application should receive the data.
+
+Example:
+
+Physical state:
+
+**Bay occupied**
+
+Application:
+
+> **Charger occupied**
+> Updated just now
+
+If the hardware changes state:
+
+**Physical sensor → backend → Routiq → mobile UI**
+
+The UI must update.
+
+---
+
+# 18. CNG SENSOR SYSTEM
+
+For a prototype/demo, use safe, non-hazardous sensing approaches.
+
+Do NOT instruct users or students to handle pressurized CNG systems.
+
+Where station infrastructure provides appropriate telemetry, the system could receive:
+
+- vehicle count
+- queue entry/exit events
+- dispenser availability
+- station status
+- refuelling activity
+- equipment fault status
+- service time estimates
+
+The application converts this into:
+
+> **7 vehicles waiting**
+
+> **Estimated wait: 11 min**
+
+Never imply that a consumer phone sensor can directly measure CNG pressure or station infrastructure.
+
+---
+
+# 19. SENSOR DATA PIPELINE
+
+Architecture:
+
+**Physical sensor**
+
+↓
+
+**Microcontroller / edge device**
+
+↓
+
+**Secure communication**
+
+↓
+
+**Backend**
+
+↓
+
+**Data validation**
+
+↓
+
+**Routiq intelligence engine**
+
+↓
+
+**Mobile application**
+
+Show this architecture visually in the project.
+
+---
+
+# 20. SENSOR DATA MUST BE VALIDATED
+
+Do not blindly trust sensor data.
+
+Every incoming reading should have:
+
+- timestamp
+- source
+- status
+- validity
+- confidence
+
+If a sensor stops responding:
+
+> **Station data temporarily unavailable**
+
+Do not display a false value.
+
+---
+
+# 21. SENSOR DEMO MODE
+
+Create a safe software simulation if physical hardware is unavailable.
+
+Provide a presenter control:
+
+**Simulate charger occupied**
+
+The application should immediately change:
+
+**Available → Occupied**
+
+Similarly:
+
+**Simulate CNG queue increase**
+
+5 min → 18 min
+
+TRIPP should respond.
+
+This creates a powerful hardware/software demonstration.
+
+---
+
+# 22. HARDWARE PROTOTYPE
+
+If building physical hardware for the project, keep it safe and low-voltage.
+
+Possible prototype:
+
+- microcontroller
+- occupancy sensor
+- LED/status indicator
+- simulated charger bay
+- safe low-voltage measurement/simulation
+- Wi-Fi/Bluetooth communication
+
+Do NOT connect an experimental circuit directly to mains electricity, EV high-voltage systems, or CNG equipment.
+
+The physical model should demonstrate the concept, not reproduce hazardous infrastructure.
+
+---
+
+# 23. TRIPP — INTELLIGENT TRIP PLANNER
+
+TRIPP is the intelligence layer connecting the entire application.
+
+The user enters:
+
+- origin
+- destination
+- intermediate stops
+- departure time
+- arrival deadline
+- vehicle
+- battery/fuel level
+- charging/refuelling preferences
+- budget
+- route preferences
+- maximum wait
+- maximum detour
+
+Everything must remain editable.
+
+---
+
+# 24. USER-CONTROLLED EV CHARGE TARGET
+
+The user must be able to define:
+
+**Battery when arriving at charger**
+
+Example:
+
+> Arrive at charger with **20%**
+
+and:
+
+**Battery when leaving charger**
+
+Example:
+
+> Leave charger with **80%**
+
+These values are editable.
+
+TRIPP must recalculate:
+
+- feasibility
+- charging duration
+- route
+- arrival time
+- energy requirement
+- estimated cost
+
+---
+
+# 25. TRIPP CONSTRAINTS
+
+Allow users to control:
+
+- minimum arrival battery
+- desired charging level
+- maximum queue
+- maximum detour
+- maximum cost
+- preferred charging speed
+- preferred operator
+- avoid tolls
+- fastest route
+- cheapest route
+- lowest waiting time
+- greener route
+- fewer stops
+
+---
+
+# 26. TRIPP MUST HANDLE CONFLICTS
+
+If all preferences cannot be satisfied:
+
+Do NOT silently compromise.
+
+Show:
+
+> **Your preferences conflict**
+
+Then explain:
+
+> Arriving with 30% battery and keeping the wait below 5 min is not possible on this route.
+
+Offer:
+
+**Relax battery target**
+
+**Relax wait limit**
+
+**Choose another route**
+
+---
+
+# 27. TRIPP RECOMMENDATION
+
+Every recommendation should explain itself.
+
+Example:
+
+> **Routiq recommends Charger B**
+>
+> 4 min farther  
+> 18 min less waiting  
+> ₹32 cheaper  
+> 14 min faster overall
+
+Provide:
+
+**Why?**
+
+for deeper information.
+
+---
+
+# 28. TRIPP LIVE REROUTING
+
+React to:
+
+- traffic changes
+- charger becoming occupied
+- charger going offline
+- CNG queue increasing
+- station closure
+- charging speed change
+- user destination change
+
+Never silently change the route.
+
+Show:
+
+> **Trip updated**
+
+> CNG queue increased from 6 → 24 min.
+
+Then:
+
+**Switch**
+
+**Keep current plan**
+
+---
+
+# 29. EV RESERVATION
+
+Support:
+
+- station selection
+- charger selection
+- date
+- time
+- duration
+- estimated energy
+- estimated cost
+- QR/check-in
+- cancellation
+- rescheduling where supported
+
+States:
+
+- upcoming
+- approaching
+- checked in
+- charging
+- completed
+- cancelled
+- expired
+- no-show
+
+Clearly distinguish demo reservations from real reservations.
+
+---
+
+# 30. CNG VIRTUAL QUEUE
+
+CNG reservation should mean:
+
+**Reserve your place/time in the queue**, not reserve the physical gas itself.
+
+Support:
+
+### Virtual queue
+
+Example:
+
+> 8 vehicles ahead  
+> Estimated wait: 16 min
+
+**Join queue**
+
+Then:
+
+> Queue position #6
+
+Update dynamically.
+
+### Time-slot reservation
+
+Where supported:
+
+> 7:15–7:30 PM
+
+Generate:
+
+- token
+- QR
+- time window
+- station
+- status
+
+Never claim universal CNG reservation.
+
+---
+
+# 31. COMMUNITY
+
+Add a dedicated **Community** section.
+
+This is not a social-media clone.
+
+It is a practical communication and improvement platform for vehicle owners.
+
+Users can:
+
+- report station problems
+- share accurate station information
+- report incorrect queues
+- report charger faults
+- report CNG availability
+- suggest improvements
+- vote on useful suggestions
+- see facility announcements
+- receive operator updates
+- discuss station experiences
+- see community alerts
+
+---
+
+# 32. COMMUNITY STRUCTURE
+
+Sections:
+
+**Updates**
+
+Official Routiq/operator announcements.
+
+**Nearby**
+
+Relevant reports around the user's area.
+
+**Discussions**
+
+User conversations.
+
+**Suggestions**
+
+Ideas for improving facilities.
+
+**Benefits**
+
+New offers, facilities, accessibility improvements, charging additions, station upgrades, etc.
+
+Keep the interface clean.
+
+Do not encourage endless scrolling.
+
+---
+
+# 33. COMMUNITY TRUST
+
+Every community report should show:
+
+- time
+- approximate location/station
+- category
+- verification status
+
+Examples:
+
+> Charger 2 reported unavailable  
+> 6 min ago  
+> 3 users confirmed
+
+or:
+
+> CNG queue appears longer than listed  
+> Reported 4 min ago
+
+Do not automatically treat user comments as verified facts.
+
+---
+
+# 34. OPERATOR COMMUNICATION
+
+Operators should be able to communicate:
+
+> Charger maintenance tonight 11 PM–1 AM.
+
+or:
+
+> New charging bays available.
+
+or:
+
+> Temporary CNG service disruption.
+
+These should appear in the relevant station page and Community.
+
+---
+
+# 35. COMMUNITY → PRODUCT IMPROVEMENT
+
+Allow users to vote:
+
+**Useful**
+
+**Not useful**
+
+and suggest:
+
+> **Request a feature**
+
+Aggregate suggestions into categories.
+
+This creates a feedback loop:
+
+**Users → Feedback → Routiq → Operators → Better facilities → Users**
+
+This should be one of Routiq's core concepts.
+
+---
+
+# 36. SAFETY SYSTEM
+
+Safety must be treated as a core product requirement.
+
+Routiq must not encourage users to bypass physical station safety procedures.
+
+The application should clearly distinguish:
+
+**Information provided by Routiq**
+
+from:
+
+**Safety procedures controlled by the station/operator.**
+
+---
+
+# 37. EV SAFETY
+
+Design the software around applicable Indian EV charging standards and guidelines.
+
+Where appropriate, account for:
+
+- charger fault state
+- emergency-stop state
+- connector status
+- electrical protection status when exposed by the station system
+- safe charging state
+- isolation/fault information where available
+- operator maintenance status
+- clear emergency instructions
+
+The Ministry of Power's 2024 EV charging guidelines should be treated as a key regulatory reference, alongside applicable Indian standards such as the IS 17017 family.
+
+Do not claim Routiq itself certifies charger safety.
+
+---
+
+# 38. CNG SAFETY
+
+CNG station workflows should respect applicable PNGRB technical and safety requirements.
+
+Relevant areas include:
+
+- station design
+- operation
+- maintenance
+- inspection
+- safety equipment
+- electrical systems
+- automation
+- emergency management
+- customer safety and awareness
+
+These areas are covered in PNGRB's retail-outlet technical/safety framework.
+
+Routiq should display station-provided safety instructions where appropriate.
+
+Example:
+
+> **Follow station safety instructions**
+
+> **Do not use your phone where prohibited by station rules.**
+
+> **Follow staff instructions during refuelling.**
+
+Do not create new safety procedures that conflict with the station/operator's approved procedures.
+
+---
+
+# 39. EMERGENCY STATES
+
+Support clear emergency information.
+
+Examples:
+
+**Emergency stop activated**
+
+**Station temporarily unavailable**
+
+**Charging fault detected**
+
+**Station safety alert**
+
+The application should tell the user:
+
+> Follow station staff instructions.
+
+Do not encourage the user to repair equipment.
+
+---
+
+# 40. ACCURACY SYSTEM
+
+Accuracy is one of Routiq's three main USP pillars.
+
+Every important data point should have:
+
+- source
+- timestamp
+- confidence where applicable
+
+Examples:
+
+> Available  
+> Updated 30 sec ago
+
+> Queue: 12–18 min  
+> Moderate confidence
+
+> Price  
+> Updated 2 hours ago
+
+---
+
+# 41. DATA SOURCE PRIORITY
+
+Where multiple sources exist, prioritize:
+
+1. Direct station/operator telemetry
+2. Verified station API
+3. Sensor data
+4. Recent verified community reports
+5. Historical estimates
+
+Show uncertainty where appropriate.
+
+Never fabricate precision.
+
+---
+
+# 42. RELIABILITY SCORE
+
+Create:
+
+**Routiq Reliability Estimate**
+
+based on:
+
+- data freshness
+- sensor health
+- recent reports
+- station history
+- consistency
+- availability accuracy
+
+This is NOT an official government rating.
+
+---
+
+# 43. SMART STATION COMPARISON
+
+Allow users to compare stations.
+
+For example:
+
+**Station A**
+- 2.1 km
+- 6 min
+- 24 min queue
+- ₹190
+
+**Station B**
+- 3.4 km
+- 8 min
+- 5 min queue
+- ₹178
+
+Then:
+
+> **Station B saves approximately 17 min overall.**
+
+---
+
+# 44. ENHANCED EV FEATURES
+
+Include useful features expected from a strong EV charging application:
+
+- vehicle compatibility
+- connector filtering
+- live availability
+- charging speed
+- charging cost
+- estimated charging duration
+- reservation
+- QR check-in
+- charger fault reporting
+- charging history
+- favourite chargers
+- route-based charger discovery
+- battery-aware routing
+- minimum arrival charge
+- desired departure charge
+- charging session status
+- cost estimation
+- charger reliability
+- station amenities
+- alternative charger recommendations
+- dynamic rerouting
+- booking protection
+- overstay/no-show handling where supported
+
+Do not add features simply for feature count.
+
+---
+
+# 45. ENHANCED CNG FEATURES
+
+Include:
+
+- live/estimated queue
+- queue confidence
+- virtual queue
+- time-slot booking where supported
+- queue history
+- station comparison
+- route-based CNG discovery
+- traffic-aware station selection
+- total journey-time optimization
+- station availability
+- community reports
+- station announcements
+- price information
+- reliability estimate
+- alternative station recommendations
+
+---
+
+# 46. COMMUNITY + SENSOR + TRIPP CONNECTION
+
+These systems should interact.
+
+Example:
+
+Sensor detects charger unavailable.
+
+↓
+
+Station status changes.
+
+↓
+
+Community sees updated status.
+
+↓
+
+TRIPP removes/re-ranks the charger.
+
+↓
+
+User receives:
+
+> **Charger unavailable**
+
+↓
+
+Alternative charger is suggested.
+
+This demonstrates that Routiq is a connected mobility ecosystem.
+
+---
+
+# 47. OFFLINE / WEAK NETWORK
+
+Support:
+
+- cached trip
+- cached booking
+- last-known station information
+- stale-data labels
+- retry
+- synchronization after reconnection
+
+Never make the app unusable because of temporary network problems.
+
+---
+
+# 48. LOADING / ERROR / EMPTY STATES
+
+Every important page must have realistic:
+
+- loading
+- empty
+- error
+- offline
+- stale-data
+- unavailable
+- permission-denied
+
+states.
+
+Never show blank screens.
+
+---
+
+# 49. SMART SEARCH
+
+Allow natural searches such as:
+
+> Fast charger near me
+
+> CNG with low queue
+
+> CCS2 charger on my route
+
+> CNG station with café
+
+> Charger under ₹X
+
+Convert these into useful filters.
+
+---
+
+# 50. SAVED PLACES
+
+Allow:
+
+- Home
+- School
+- Work
+- Favourite places
+
+Also allow:
+
+**Recent destinations**
+
+---
+
+# 51. ACTIVE JOURNEY MODE
+
+When a trip begins, simplify the interface.
+
+Show:
+
+**Next action**
+
+instead of a dashboard full of data.
+
+Example:
+
+> Continue for 2.4 km
+
+Then:
+
+> Charger ahead · 700 m
+
+Then:
+
+> Check in
+
+Detailed analytics should remain available but secondary.
+
+---
+
+# 52. SAFETY WHILE DRIVING
+
+Do not encourage interaction with complex controls while driving.
+
+During an active trip:
+
+- large controls
+- minimal information
+- clear navigation
+- voice-compatible architecture
+- no complicated forms
+
+Detailed editing should be done before the journey or when safely stopped.
+
+---
+
+# 53. PAYMENTS
+
+Prepare architecture for:
+
+- UPI
+- cards
+- refunds
+- booking charges
+- charging payments
+
+Use mock payments in the prototype unless an actual payment gateway is integrated.
+
+Never pretend a real transaction happened.
+
+---
+
+# 54. OPERATOR DASHBOARD
+
+Create a separate operator interface.
+
+Display:
+
+- station status
+- charger status
+- queue
+- reservations
+- faults
+- reports
+- occupancy
+- demand
+- maintenance
+- announcements
+
+Operator actions should affect the user-facing application in Demo Mode.
+
+---
+
+# 55. DEMO CONTROL CENTER
+
+Create a presenter-only control panel.
+
+Allow the presenter to simulate:
+
+### EV
+Available → Occupied  
+Online → Offline  
+Normal charging → Fault
+
+### CNG
+5 min queue → 25 min queue  
+Available → Unavailable
+
+### Traffic
+Normal → Heavy
+
+### Sensor
+Healthy → Offline
+
+### Community
+New report submitted
+
+### TRIPP
+Trigger rerouting
+
+The consumer application should visibly respond.
+
+This should become a major part of the science-project demonstration.
+
+---
+
+# 56. ABOUT
+
+Keep About extremely short.
+
+**Routiq**
+
+**Smarter Routes. Greener Journeys.**
+
+> One mobility layer connecting charging, refuelling and intelligent trip planning.
+
+Then:
+
+**EV**
+
+Charge smarter.
+
+**CNG**
+
+Wait less.
+
+**TRIPP**
+
+Adapt to the road.
+
+Do not create a long corporate values page.
+
+---
+
+# 57. ACCESSIBILITY
+
+Support:
+
+- high contrast
+- readable typography
+- large touch targets
+- labels alongside icons
+- non-colour-only status
+- clear error messages
+- simple language
+
+---
+
+# 58. PERFORMANCE
+
+Optimize for:
+
+- mobile
+- slow networks
+- low-end devices
+- fast initial load
+- efficient map rendering
+- minimal unnecessary API calls
+
+Home should load especially quickly.
+
+---
+
+# 59. RESPONSIVE DESIGN
+
+The application must work properly on:
+
+- phone
+- tablet
+- laptop
+- desktop
+
+Mobile should feel intentionally designed rather than like a compressed desktop site.
+
+---
+
+# 60. REAL DATA VS DEMO DATA
+
+If live APIs or hardware are not connected:
+
+Clearly label simulated information.
+
+Examples:
+
+**Demo data**
+
+**Simulated live status**
+
+**Prototype sensor**
+
+Never falsely claim:
+
+> Live station data
+
+when it is simulated.
+
+The architecture must nevertheless be prepared for real data.
+
+---
+
+# 61. FINAL DESIGN RULE
+
+The app must follow:
+
+> **Minimal first. Sophisticated second.**
+
+A new user sees:
+
+**Where are you going?**
+
+An experienced user can explore:
+
+**Maps → Stations → Sensor data → Queue intelligence → TRIPP → Community → Analytics**
+
+The complexity should reveal itself only when useful.
+
+---
+
+# 62. THE CORE ROUTIQ LOOP
+
+Everything should connect through:
+
+**Sense**
+
+Collect information from stations, sensors, operators, users and maps.
+
+↓
+
+**Understand**
+
+Validate and interpret the information.
+
+↓
+
+**Recommend**
+
+TRIPP and Routiq generate useful options.
+
+↓
+
+**Explain**
+
+Tell the user why an option is better.
+
+↓
+
+**Decide**
+
+The user remains in control.
+
+↓
+
+**Act**
+
+Reserve, navigate, charge/refuel.
+
+↓
+
+**Learn**
+
+User feedback and station data improve the system.
+
+---
+
+# 63. ROUTIQ USP
+
+The product should repeatedly demonstrate three principles:
+
+### USABILITY
+
+Anyone should be able to understand what to do next.
+
+### ACCURACY
+
+Information should show freshness, source and confidence.
+
+### EFFICIENCY
+
+Routiq should reduce:
+
+- waiting
+- unnecessary detours
+- uncertainty
+- charging/refuelling time
+- inefficient routes
+
+The application is successful when it makes a complicated mobility decision feel simple.
+
+---
+
+# 64. FINAL PRODUCT STATEMENT
+
+The final application should communicate:
+
+> **Routiq doesn't just show you where to charge or refuel.**
+>
+> **It understands the journey, the station, the queue, the vehicle and changing conditions — then helps you make the smartest decision while keeping you in control.**
+
+Build the entire product around:
+
+**Smarter Routes. Greener Journeys.**
